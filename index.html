@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ng-app="BasicHttpAuthExample">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>Essencial Gestão</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+  </head>
+
+  <body>
+   
+      <nav class="navbar">
+        <div class="container">
+          <a class="navbar-brand logo"><img src="data:image/png;base64,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" data-deferred="1" class="rg_i Q4LuWd" jsname="Q4LuWd" width="62" height="62" alt="Essencial Gestão Pública - Página inicial | Facebook" data-iml="1238.800000011921" data-atf="true"></a>
+          <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="modules/cadastro/views/cadastro.html">Cadastre-se</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Serviços</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="modules/fale conosco/views/fale conosco.html">Fale conosco</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Informações do usuário</a>
+            </li>
+
+            <li class="nav-item" style="justify-content: flex-end;">
+                <form style="display: flex; flex-direction: row; margin-top: 5px;">
+                    <input class="form-control" type="pesquisar" placeholder="Pesquisar" aria-label="Pesquisar" style="margin-right: 8px;">
+                    <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+                </form>
+              </div>
+            </li>
+
+            
+          </ul>
+
+          
+        </div>
+      </nav>
+   
+      <div class="container">
+        <div class="col-xs-offset-4 col-xs-4">
+          <div ng-view></div>
+        </div>
+      </div>
+
+    <div class="credits text-center">
+      <p>
+          <a href=>Login pedro senha 1234</a>
+      </p>
+      <p>
+
+      </p>
+    </div>
+
+    <script src="//code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script src="//code.angularjs.org/1.2.20/angular.js"></script>
+    <script src="//code.angularjs.org/1.2.20/angular-route.js"></script>
+    <script src="//code.angularjs.org/1.2.13/angular-cookies.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="modules/authentication/services.js"></script>
+    <script src="modules/authentication/controllers.js"></script>
+    <script src="modules/home/controllers.js"></script>
+    <script src="modules/cadastro/controllers.js"></script>
+  </body>
+
+</html>
